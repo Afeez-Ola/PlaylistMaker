@@ -7,7 +7,7 @@ def create_spotify_playlist(excel_file):
     # Replace these with your actual credentials from the Spotify Developer Dashboard
     CLIENT_ID = 'a9eea35b6f63478e8f6ba2232dc223ad'
     CLIENT_SECRET = 'c5096207ee114689bc0a3620f835676c'
-    REDIRECT_URI = 'http://localhost:8888/callback'
+    REDIRECT_URI = 'http://127.0.0.1:8888/callback'
     
     # Authenticate
     # Scope 'playlist-modify-public' allows us to create and add to playlists
