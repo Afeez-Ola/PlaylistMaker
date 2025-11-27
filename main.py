@@ -1,13 +1,15 @@
 import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
+from dotenv import load_dotenv
 
 def create_spotify_playlist(excel_file):
     # --- CONFIGURATION ---
     # Replace these with your actual credentials from the Spotify Developer Dashboard
-    CLIENT_ID = 'a9eea35b6f63478e8f6ba2232dc223ad'
-    CLIENT_SECRET = 'c5096207ee114689bc0a3620f835676c'
-    REDIRECT_URI = 'http://127.0.0.1:8888/callback'
+    CLIENT_ID = os.getenv('SPOTIPY_CLIENT_ID')
+    CLIENT_SECRET = os.getenv('SPOTIPY_CLIENT_SECRET')
+    REDIRECT_URI = os.getenv('SPOTIPY_REDIRECT_URI')
     
     # Authenticate
     # Scope 'playlist-modify-public' allows us to create and add to playlists
